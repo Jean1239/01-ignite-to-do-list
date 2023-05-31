@@ -5,9 +5,7 @@ function App() {
 	return (
 		<div>
 			<Header />
-			<main>
-				<TaskContainer />
-			</main>
+			<TaskContainer />
 		</div>
 	);
 }
