@@ -1,9 +1,9 @@
-import { useState } from "react";
 import styles from "./taskContainer.module.css";
-import { TaskForm } from "./TaskForm/TaskForm";
-import { TaskInfo } from "./TaskInfo/TaskInfo";
-import { TaskList } from "./TaskList/TaskList";
-import { TaskListEmpty } from "./TaskList/TaskListEmpty";
+import { useState } from "react";
+import { TaskForm } from "../TaskForm/TaskForm";
+import { TaskInfo } from "../TaskInfo/TaskInfo";
+import { TaskList } from "../TaskList/TaskList";
+import { TaskListEmpty } from "../TaskListEmpty/TaskListEmpty";
 
 export interface TaskType {
 	id: string;

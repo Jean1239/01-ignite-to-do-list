@@ -1,4 +1,4 @@
-import { TaskType } from "../TaskContainer";
+import { TaskType } from "../TaskContainer/TaskContainer";
 import styles from "./taskInfo.module.css";
 
 interface TaskInfoProps {

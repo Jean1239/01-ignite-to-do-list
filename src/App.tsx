@@ -1,12 +1,12 @@
-import { Header } from "./components/Header";
-import { TaskContainer } from "./components/TaskContainer";
+import { Header } from "./components/Header/Header";
+import { TaskContainer } from "./components/TaskContainer/TaskContainer";
 
 function App() {
 	return (
-		<div>
+		<>
 			<Header />
 			<TaskContainer />
-		</div>
+		</>
 	);
 }
 
