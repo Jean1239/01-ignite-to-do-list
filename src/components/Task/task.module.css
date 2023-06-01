@@ -16,3 +16,52 @@
 	flex: 1;
 	overflow: auto;
 }
+
+.trashContainer {
+	height: 24px;
+	width: 24px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--gray-300);
+}
+
+.trashContainer:hover {
+	background-color: var(--gray-400);
+	border-radius: 4px;
+	color: var(--danger);
+	cursor: pointer;
+}
+
+.circleContainer {
+	height: 24px;
+	width: 24px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--blue);
+}
+
+.circleContainer:hover {
+	color: var(--blue-dark);
+	cursor: pointer;
+}
+
+.checkContainer {
+	height: 24px;
+	width: 24px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--purple-dark);
+}
+
+.checkContainer:hover {
+	color: var(--purple);
+	cursor: pointer;
+}
+
+.finished {
+	text-decoration: line-through;
+	color: var(--gray-300);
+}

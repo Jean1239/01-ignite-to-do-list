@@ -1,4 +1,3 @@
-import { TaskType } from "../TaskContainer";
 import styles from "./taskForm.module.css";
 import { useForm } from "react-hook-form";
 
@@ -7,13 +6,12 @@ interface TaskFormData {
 }
 
 interface TaskFormProps {
-	addTaskToList: (task: TaskType) => void;
+	addTaskToList: (taskName: string) => void;
 }
 
 export function TaskForm({ addTaskToList }: TaskFormProps) {
 	function createTask({ taskName }: TaskFormData) {
-		console.log(taskName);
-		addTaskToList({ name: taskName });
+		addTaskToList(taskName);
 	}
 
 	const { register, handleSubmit } = useForm<TaskFormData>();
