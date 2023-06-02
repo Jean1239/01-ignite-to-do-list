@@ -1,5 +1,5 @@
 import styles from "./taskContainer.module.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { TaskForm } from "../TaskForm/TaskForm";
 import { TaskInfo } from "../TaskInfo/TaskInfo";
 import { TaskList } from "../TaskList/TaskList";
@@ -12,7 +12,17 @@ export interface TaskType {
 }
 
 export function TaskContainer() {
-	const [taskList, setTaskList] = useState([] as TaskType[]);
+	const [taskList, setTaskList] = useState(() => {
+		const taskListString = localStorage.getItem("@to-do-list:task-list");
+		if (taskListString) {
+			return JSON.parse(taskListString) as TaskType[];
+		}
+		return [] as TaskType[];
+	});
+
+	useEffect(() => {
+		localStorage.setItem("@to-do-list:task-list", JSON.stringify(taskList));
+	}, [taskList]);
 
 	function addTaskToList(taskName: string) {
 		const task = { id: new Date().toISOString(), name: taskName };
